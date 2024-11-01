@@ -117,6 +117,7 @@ class SøkeBinærTre<T> implements Beholder<T> {
                     }
                 }
                 nyRot.forelder = node.forelder; // oppdater forelderen til nyRot
+                node.forelder = nyRot; // oppdater forelder til node
                 node = nyRot;
             }
             // Høyre høyre tilfelle
@@ -132,6 +133,7 @@ class SøkeBinærTre<T> implements Beholder<T> {
                     }
                 }
                 nyRot.forelder = node.forelder;
+                node.forelder = nyRot;
                 node = nyRot;
             }
             // Venstre høyre tilfelle
@@ -149,6 +151,7 @@ class SøkeBinærTre<T> implements Beholder<T> {
                     }
                 }
                 nyRot.forelder = node.forelder;
+                node.forelder = nyRot;
                 node = nyRot;
             }
             // Høyre venstre tilfelle
@@ -165,6 +168,7 @@ class SøkeBinærTre<T> implements Beholder<T> {
                     }
                 }
                 nyRot.forelder = node.forelder;
+                node.forelder = nyRot;
                 node = nyRot;
             }
             node = node.forelder;
