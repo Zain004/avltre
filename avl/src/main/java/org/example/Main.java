@@ -151,6 +151,7 @@ class SøkeBinærTre<T> implements Beholder<T> {
                     }
                 }
                 nyRot.forelder = node.forelder;
+                nyRot.venstre.forelder = nyRot;
                 node.forelder = nyRot;
                 node = nyRot;
             }
@@ -168,6 +169,7 @@ class SøkeBinærTre<T> implements Beholder<T> {
                     }
                 }
                 nyRot.forelder = node.forelder;
+                nyRot.høyre.forelder = nyRot;
                 node.forelder = nyRot;
                 node = nyRot;
             }
